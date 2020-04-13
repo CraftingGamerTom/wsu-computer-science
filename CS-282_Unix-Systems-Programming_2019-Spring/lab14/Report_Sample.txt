@@ -1,0 +1,10 @@
+     Students' Assignment Statistics
+
+--- Name 	 Total marks 	 Average ------
+Kane 		 240 		 80.00
+Abel 		 265 		 88.33
+Teddy 		 240 		 80.00
+Gabby 		 260 		 86.67
+Betty 		 250 		 83.33
+Average Assignment Marks: 	 Assign#1	 Assign#2	 Assign#3
+				90.00		82.00		79.00

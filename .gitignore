@@ -1,3 +1,12 @@
+# Workspace Metadata
+*/.metadata/*
+*.cproject
+*.project
+
+# Specific Project Metadata
+CS-282_Unix-Systems-Programming_2019-Spring/*/.settings/*
+CS-282_Unix-Systems-Programming_2019-Spring/*/Debug/*
+
 # Prerequisites
 *.d
 

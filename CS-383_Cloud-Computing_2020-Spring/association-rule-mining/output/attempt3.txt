@@ -1,0 +1,172 @@
+Noteable Attempt 3
+    This time to force the algorithm to find a relationship between longitude / latitude and the Rank I removed the Rank. Next time we will do the opposite (Remove Weighted Incident Score).
+
+
+** Daily Data **
+
+    I had to mess with the support a lot for this one. It was hard to find any rules at all. Once I did find rules I noticed their length was longer than most rules in the past.
+
+    DATA INFO
+    >>> dailyRankedCrimes.info()
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 186124 entries, 0 to 186123
+    Data columns (total 6 columns):
+    #   Column                   Non-Null Count   Dtype  
+    ---  ------                   --------------   -----  
+    0   ACTUAL_DTE               186124 non-null  int64  
+    1   ACTUAL_DTE.1             186124 non-null  int64  
+    2   ACTUAL_DTE.2             186124 non-null  int64  
+    3   latbin                   186124 non-null  float64
+    4   lonbin                   186124 non-null  float64
+    5   WEIGHTED_INCIDENT_SCORE  186124 non-null  int64  
+    dtypes: float64(2), int64(4)
+    memory usage: 8.5 MB
+
+
+    SETTINGS
+    Min Support:      0.00025
+    Min Confidence:   0.95
+    Min Lift:         3
+    Min Length:       2
+    
+    RESULTS
+    Rule Count:       5
+    
+    RULES
+    Rule: [2.0, 42.21] -> [-71.8]
+    Support: 0.00034922954589413507
+    Confidence: 0.9558823529411764
+    Lift: 8.771515409891215
+    =====================================
+    Rule: [42.21, 11.0] -> [-71.8]
+    Support: 0.000451312028540113
+    Confidence: 0.9545454545454545
+    Lift: 8.759247556171088
+    =====================================
+    Rule: [42.21, 14.0] -> [-71.8]
+    Support: 0.00031162021018245903
+    Confidence: 0.9830508474576273
+    Lift: 9.020823149051097
+    =====================================
+    Rule: [2009.0, 42.21] -> [-71.8]
+    Support: 0.00029550192344888354
+    Confidence: 0.9649122807017543
+    Lift: 8.854377228878041
+    =====================================
+    Rule: [9.0, 42.21, 7.0] -> [-71.8]
+    Support: 0.00034922954589413507
+    Confidence: 0.9558823529411764
+    Lift: 8.771515409891215
+    =====================================
+
+
+
+** Yearly Data **
+
+    In this I had to play with the confidence because the Rules we were generating were not very interesting. Seems that based on weighted incident score and either latitude or longitude it can figure out the corresponding latitude or longitude.  Perhaps it is hard to find an assocation between area and how much crime? I did not want to go below 90% confidence.
+
+    DATA INFO
+    >>> yearlyRankedCrimes.info()
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 6962 entries, 0 to 6961
+    Data columns (total 5 columns):
+    #   Column                   Non-Null Count  Dtype  
+    ---  ------                   --------------  -----  
+    0   Unnamed: 0               6962 non-null   int64  
+    1   Year                     6962 non-null   int64  
+    2   latbin                   6962 non-null   float64
+    3   lonbin                   6962 non-null   float64
+    4   WEIGHTED_INCIDENT_SCORE  6962 non-null   int64  
+    dtypes: float64(2), int64(3)
+    memory usage: 272.1 KB
+
+    SETTINGS
+    Min Support:      0.00045
+    Min Confidence:   0.8
+    Min Lift:         3
+    Min Length:       2
+    
+    RESULTS
+    Rule Count:       16
+    
+    RULES
+    Rule: [-77.025] -> [38.94]
+    Support: 0.001005458201666188
+    Confidence: 1.0
+    Lift: 994.5714285714284
+    =====================================
+    Rule: [-75.22500000000002] -> [39.93]
+    Support: 0.0005745475438092502
+    Confidence: 1.0
+    Lift: 1740.5
+    =====================================
+    Rule: [42.2] -> [-71.83]
+    Support: 0.001292731973570813
+    Confidence: 1.0
+    Lift: 26.674329501915707
+    =====================================
+    Rule: [42.34] -> [-71.79]
+    Support: 0.001292731973570813
+    Confidence: 1.0
+    Lift: 16.458628841607563
+    =====================================
+    Rule: [-71.735] -> [42.235]
+    Support: 0.0018672795173800632
+    Confidence: 1.0
+    Lift: 17.492462311557787
+    =====================================
+    Rule: [-71.72] -> [42.295]
+    Support: 0.0005745475438092502
+    Confidence: 1.0
+    Lift: 23.36241610738255
+    =====================================
+    Rule: [632.0] -> [42.27]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 16.285380116959065
+    =====================================
+    Rule: [-71.885, 7.0] -> [42.275]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 13.718226600985222
+    =====================================
+    Rule: [16.0, -71.855] -> [42.29]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 17.625316455696204
+    =====================================
+    Rule: [9.0, 42.305] -> [-71.84]
+    Support: 0.0005745475438092502
+    Confidence: 1.0
+    Lift: 24.775800711743774
+    =====================================
+    Rule: [-71.805, 7.0] -> [42.32]
+    Support: 0.0011490950876185005
+    Confidence: 0.8
+    Lift: 50.63272727272728
+    =====================================
+    Rule: [42.21, 7.0] -> [-71.79]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 13.166903073286052
+    =====================================
+    Rule: [-71.77, 14.0] -> [42.22]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 44.5568
+    =====================================
+    Rule: [96.0, 42.255] -> [-71.765]
+    Support: 0.0005745475438092502
+    Confidence: 0.8
+    Lift: 20.253090909090908
+    =====================================
+    Rule: [16.0, -71.75] -> [42.245]
+    Support: 0.0005745475438092502
+    Confidence: 1.0
+    Lift: 17.147783251231527
+    =====================================
+    Rule: [-71.735, 7.0] -> [42.235]
+    Support: 0.0005745475438092502
+    Confidence: 1.0
+    Lift: 17.492462311557787
+    =====================================

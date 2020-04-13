@@ -1,0 +1,2 @@
+PlanetFallTime.o: PlanetFallTime.c globals.h
+PlanetFromCmdLine.o: PlanetFromCmdLine.c

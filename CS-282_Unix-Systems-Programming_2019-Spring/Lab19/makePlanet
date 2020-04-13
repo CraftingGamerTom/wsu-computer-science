@@ -1,0 +1,9 @@
+PlanetFromCmdLine: PlanetFallTime.c globals.h PlanetFromCmdLine.c
+	#gcc PlanetFallTime.c PlanetFromCmdLine.c -o PlanetFallTime  -lm
+	cc -o PlanetFromCmdLine PlanetFallTime.c PlanetFromCmdLine.c -lm
+depend:
+	cc -E -MM Planet*.c > .depend
+install:
+	cp PlanetFromCmdLine ./Install
+clean:
+	rm -i Planet*.o

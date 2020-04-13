@@ -1,0 +1,21 @@
+read num1
+read num2
+read num3
+
+if [ $num1 -gt $num2 ]; then
+	high=$num1
+else
+	high=$num2
+fi
+
+# -------------------------
+
+if [ $high -gt $num3 ]; then
+	highest=$high
+else
+	highest=$num3
+fi
+
+echo $highest
+
+

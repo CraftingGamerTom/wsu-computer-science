@@ -1,0 +1,8 @@
+ElementsFromCmdLine: ElementsFromCmdLine.c globals.h
+	gcc ElementsFromCmdLine.c -o ElementsFromCmdLine -lm
+depend:
+	cc -E -MM Elements*.c > .depend
+install:
+	cp ElementsFromCmdLine ./Install
+clean:
+	rm -i Elements*.o
