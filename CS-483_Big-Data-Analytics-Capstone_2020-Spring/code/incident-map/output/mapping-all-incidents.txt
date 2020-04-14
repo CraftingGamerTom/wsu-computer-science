@@ -1,0 +1,9 @@
+I tried to map all of the incidents but the HTML file generated was 250MB. It took a few minutes to load into Sublime (text editor) and too over 5 minutes with 2 cores at 100% to load the page in Chrome. Even once it was loaded it would spike my CPU when I try to pan the page and no dots loaded. The HTML file was 4,250,000 lines long.
+The original dataset had 231999 incidents
+
+Decided to pick one year (2019) to display the crimes for.
+
+
+-------------
+
+I later decided to use Tableau (A tool for plotting data) to visualize the data and easily filter. I did not have to write any code for this. I was able to do this using a student license. This tool is amazing.
