@@ -37,4 +37,4 @@ Thanks! :heart: :heart: :heart:
 
 CraftingGamerTom
 
-_This document was created be using the [Ruby on Rails](https://github.com/rails/rails) contibuting document as a template._
+_This document was created be using the [Ruby on Rails](https://github.com/rails/rails) contributing document as a template._
