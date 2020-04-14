@@ -7,10 +7,6 @@
 CS-282_Unix-Systems-Programming_2019-Spring/*/.settings/*
 CS-282_Unix-Systems-Programming_2019-Spring/*/Debug/*
 
-# Specific Project Git Metadata
-CS-348_Software-Process-Managment_2019-Spring/*/.git/*
-
-
 # Prerequisites
 *.d
 
@@ -43,3 +39,4 @@ CS-348_Software-Process-Managment_2019-Spring/*/.git/*
 *.exe
 *.out
 *.app
+
