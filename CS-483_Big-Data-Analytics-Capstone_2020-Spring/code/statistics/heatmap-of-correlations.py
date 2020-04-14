@@ -1,3 +1,5 @@
+df = crimes
+
 def heatMap(df):
     #Create Correlation df
     corr = df.corr()
@@ -17,15 +19,10 @@ def heatMap(df):
 ##find missing values
 ##plt.figure(figsize=(8,6))
 ##sns.heatmap(df.isnull(), cbar = False)
-df.dropna(); ## drop rows with missing data
-# convert dates to pandas datetime format
-#df.ACTUAL_DTE = pd.to_datetime(df.ACTUAL_DTE, format='%m/%d/%Y %I:%M:%S %p')
-df.ACTUAL_DTE = pd.to_datetime(df.ACTUAL_DTE, format='%Y-%m-%d %H:%M:%S')
-df.index = pd.DatetimeIndex(df.ACTUAL_DTE)
-x = df.sample(30000) ##sampling a part of the dataset
-heatMap(x) ## correlation between variables
 
-x['Primary Type'].value_counts().plot.bar()
-plt.title("Crimes")
-plt.show()
+df = df.dropna(); ## drop rows with missing data
 
+#x = df.sample(30000) ##sampling a part of the dataset
+#heatMap(x) ## correlation between variables
+
+heatMap(df) ## correlation between variables

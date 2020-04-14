@@ -1,37 +1,40 @@
 # ----- TOP 10 STREETS FOR CRIME -----
-# MAIN ST              12532
-# LINCOLN ST            4559
-# PARK AV               4399
-# GRAFTON ST            3712
-# CHANDLER ST           3606
-# PLEASANT ST           3492
-# TOBIAS BOLAND WAY     2160
-# MILLBURY ST           2039
-# CAMBRIDGE ST          2012
-# W BOYLSTON ST         1883
+MAIN ST          14693
+LINCOLN ST        5724
+PARK AV           5513
+GRAFTON ST        4698
+CHANDLER ST       4140
+PLEASANT ST       4008
+CAMBRIDGE ST      2439
+MILLBURY ST       2434
+W BOYLSTON ST     2413
+BELMONT ST        2195
+Name: PRIMARY_STREET_NAME, dtype: int64
+
 
 # ----- TOP 10 CRIME TYPES -----
-# Destruction/Damage/Vandalism of Property    22642
-# Burglary/Breaking & Entering                18826
-# Simple Assault                              18293
-# All Other Thefts                            15560
-# Theft from Motor Vehicle                    14432
-# Aggravated Assault                          11478
-# Disorderly Conduct                           8764
-# Shoplifting                                  7789
-# Drug/Narcotic Violations                     7052
-# Motor Vehicle Theft                          6414
-# Name: IBR_TYPE_DESC, dtype: int64
+Destruction/Damage/Vandalism of Property    29054
+Burglary/Breaking & Entering                24534
+Simple Assault                              22084
+All Other Thefts                            20231
+Theft from Motor Vehicle                    18652
+Aggravated Assault                          12645
+Motor Vehicle Theft                         11036
+Shoplifting                                 10147
+Drug/Narcotic Violations                     9077
+Assault - Intimidation                       8714
+Name: IBR_TYPE_DESC, dtype: int64
+
 
 # ----- TOP 10 ADDRESSES FOR CRIME -----
-# 25 TOBIAS BOLAND WAY    2026
-# 7 NEPONSET ST            916
-# 529 LINCOLN ST           861
-# 68 STAFFORD ST           854
-# 455 MAIN ST              563
-# 50 CAMBRIDGE ST          548
-# 2 WASHINGTON SQ          514
-# 30 CHANDLER ST           511
-# 9 LINCOLN SQ             462
-# 3 SALEM SQ               405
-# dtype: int64
+25 TOBIAS BOLAND WAY    1831
+7 NEPONSET ST           1308
+68 STAFFORD ST          1215
+529 LINCOLN ST           984
+50 CAMBRIDGE ST          636
+455 MAIN ST              610
+9 LINCOLN SQ             550
+541 LINCOLN ST           542
+701 MAIN ST              527
+2 WASHINGTON SQ          502
+dtype: int64
