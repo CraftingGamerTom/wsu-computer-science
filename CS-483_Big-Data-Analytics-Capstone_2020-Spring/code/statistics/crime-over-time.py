@@ -3,8 +3,8 @@
 # Crime over time
 plt.figure(figsize=(11,4))
 crimes.resample('D').size().rolling(365).sum().plot()
-plt.title('Rolling sum of all crimes from 2007 - 2018')
-plt.ylabel('Number of crimes')
+plt.title('Rolling Sum of All Crimes')
+plt.ylabel('Number of Crimes')
 plt.xlabel('Days')
 plt.show()
 

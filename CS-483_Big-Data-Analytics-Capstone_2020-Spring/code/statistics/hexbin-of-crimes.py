@@ -16,27 +16,16 @@ def heatMap(df):
     #show plot
     plt.show()
 
-x = df.sample(30000) ##sampling a part of the dataset
+#x = df.sample(30000) ##sampling a part of the dataset
+x = df # We want the whole dataset not a sample
 
 df.dropna(); ## drop rows with missing data
-df.ACTUAL_DTE = pd.to_datetime(df.ACTUAL_DTE, format='%Y-%m-%d %H:%M:%S')
-df.index = pd.DatetimeIndex(df.ACTUAL_DTE)
 
 x_theft = x[x['IBR_TYPE_DESC'].isin(("Motor Vehicle Theft", "Credit Card/Automatic Teller Fraud", "Shoplifting", "Burglary/Breaking & Entering", "Robbery", "Theft from Motor Vehicle", "Theft from Building", "All Other Thefts"))]
 x_battery = x[x['IBR_TYPE_DESC'].isin(("Simple Assault", "Aggravated Assault", "Forcible Fondling", "Assault - Intimidation")) ]
 x_cd = x[x['IBR_TYPE_DESC'].isin(("Destruction/Damage/Vandalism of Property", "XXX"))]
 x_narc = x[x['IBR_TYPE_DESC'].isin(("Drug/Narcotic Violations", "XXX"))]
 x_prostitution = x[x['IBR_TYPE_DESC'].isin(("Prostitution", "XXX"))]
-
-# All Crimes barplot
-x['IBR_TYPE_DESC'].value_counts().plot.bar()
-plt.title("Crimes")
-plt.show()
-
-# Barplot of theft types
-x_theft['IBR_TYPE_DESC'].value_counts(normalize=True).plot.bar()
-plt.title("Theft Types")
-plt.show()
 
 print("Heat map over cooridantes of crimes")
 x.plot.hexbin(x='LONGITUDE', y='LATITUDE', gridsize=10)

@@ -8,4 +8,4 @@ pd.value_counts(df['PRIMARY_STREET_NAME'])[:10]
 pd.value_counts(df['IBR_TYPE_DESC'])[:10]
 
 # Print Top 10 Addresses for Crime
-pd.value_counts(df['PRIMARY_STREET_NUM'].astype(str) + df['PRIMARY_STREET_NAME'])[:10]
+pd.value_counts(df['PRIMARY_STREET_NUM'].astype(str) + ' ' + df['PRIMARY_STREET_NAME'].astype(str))[:10]
