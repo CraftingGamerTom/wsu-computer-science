@@ -13,7 +13,7 @@ plt.style.use('seaborn')
 
 
 # Read the file
-crimeDataCsvPath = '/media/tcrokicki/MainDrive/temp-school/capstone/WorcesterData_07-19.csv'
+crimeDataCsvPath = '/media/tcrokicki/MainDrive/temp-school/capstone/WorcesterData_03-19.csv'
 crimes = pd.read_csv(crimeDataCsvPath,error_bad_lines=False)
 
 

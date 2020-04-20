@@ -37,7 +37,7 @@ unmergedData = [crimes03, crimes04, crimes05, crimes06, crimes07, crimes08, crim
 crimes = pd.concat(unmergedData, ignore_index=False, axis=0)
 
 # Use to create new csv with the merged data
-crimes.to_csv(dataPath + 'WorcesterData_07-19.csv')
+crimes.to_csv(dataPath + 'WorcesterData_03-19.csv')
 
 # clean up references to unmerged data
 for i in unmergedData:
