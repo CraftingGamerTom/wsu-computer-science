@@ -3,7 +3,99 @@ Noteable Attempt 1
 ** Daily Data **
 
     Attempted to set up a list of lists using a python array to do assocation mining on but it ran for over 20 hours and still had not finished. The data that originally took up 7MB was now over 1.7GB and I constantly has 1 core of my CPU at 100%. At that point I terminated the command
-    We got no results from this for daily.
+    We got no results from this for daily locally.
+
+    ---------------------------
+
+    I ran it on SageMaker. It took about 20 minutes to run
+
+    DATA INFO
+    >>> dailyRankedCrimes.info()
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 186124 entries, 0 to 186123
+    Data columns (total 7 columns):
+    ACTUAL_DTE                 186124 non-null int64
+    ACTUAL_DTE.1               186124 non-null int64
+    ACTUAL_DTE.2               186124 non-null int64
+    latbin                     186124 non-null float64
+    lonbin                     186124 non-null float64
+    WEIGHTED_INCIDENT_SCORE    186124 non-null int64
+    RANK                       186124 non-null float64
+    dtypes: float64(3), int64(4)
+    memory usage: 9.9 MB
+
+    SETTINGS
+    Min Support:      0.02
+    Min Confidence:   0.95
+    Min Lift:         3
+    Min Length:       4
+
+    RESULTS:
+    Rule Count: 12
+
+    RULES:
+    RelationRecord(items=frozenset({'R', 'N'}), support=0.2857142857142857, ordered_statistics=[OrderedStatistic(items_base=frozenset({'N'}), items_add=frozenset({'R'}), confidence=1.0, lift=3.5), OrderedStatistic(items_base=frozenset({'R'}), items_add=frozenset({'N'}), confidence=1.0, lift=3.5)])
+    Rule: ['N'] -> ['R']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['i']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['l']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['i'] -> ['l']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['i'] -> ['n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['l'] -> ['n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['i', 'l']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['i', 'n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['l', 'n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['i'] -> ['l', 'n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+    Rule: ['b'] -> ['i', 'l', 'n']
+    Support: 0.2857142857142857
+    Confidence: 1.0
+    Lift: 3.5
+    =====================================
+
 
 ** Yearly Data **
     I ran it with the yearly ranked crimes dataset because it was much smaller. We did get results for this but found them hard to understand due to the nature of the list of lists created in the for loop.
