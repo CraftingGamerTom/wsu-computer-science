@@ -12,9 +12,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from apyori import apriori
 
-dataCsvPath = '/media/tcrokicki/MainDrive/temp-school/capstone/'
-dailyRankedCrimes = pd.read_csv(dataCsvPath + "WorcesterData_BinRanked_Day.csv",error_bad_lines=False)
-yearlyRankedCrimes = pd.read_csv(dataCsvPath + "WorcesterData_BinRanked_Year.csv",error_bad_lines=False)
+repositoryPath = '/media/tcrokicki/MainDrive/workspaces/wsu/wsu-computer-science/'
+dataCsvPath = 'CS-383_Cloud-Computing_2020-Spring/area-ranking/output/'
+dailyRankedCrimes = pd.read_csv(repositoryPath + dataCsvPath + "WorcesterData_BinRanked_Day.csv",error_bad_lines=False)
+yearlyRankedCrimes = pd.read_csv(repositoryPath + dataCsvPath + "WorcesterData_BinRanked_Year.csv",error_bad_lines=False)
 
 # Fix the Column names in the daily ranked crimes
 # Found that this breaks assocation rule mining - related to using date? 
