@@ -1,3 +1,7 @@
+# Some sources
+# https://medium.com/forsk-labs/creating-interactive-crime-maps-with-folium-18498d5866fe
+# https://www.kaggle.com/uds5501/chicago-crime-mapping
+
 start_date = '01-01-2019'
 end_date = '12-31-2019'
 
