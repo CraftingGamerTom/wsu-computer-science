@@ -33,7 +33,7 @@ crimes.head(3)
 # Below uses seconds (we dont have seconds) & capital Y instead of lowercase for last two digits of year
 #crimes.ACTUAL_DTE = pd.to_datetime(crimes.ACTUAL_DTE, format='%m/%d/%Y %I:%M:%S %p')
 #crimes.ACTUAL_DTE = pd.to_datetime(crimes.ACTUAL_DTE, format='%m/%d/%y %I:%M %p')
-crimes.ACTUAL_DTE = pd.to_datetime(crimes.ACTUAL_DTE, format='%m/%d/%Y %H:%M:S', infer_datetime_format=True)
+crimes.ACTUAL_DTE = pd.to_datetime(crimes.ACTUAL_DTE, format='%m/%d/%Y %H:%M:%S', infer_datetime_format=True)
 
 # Set the index to the date time (FOR MAPS ONLY)
 crimes = crimes.set_index(['ACTUAL_DTE'])
