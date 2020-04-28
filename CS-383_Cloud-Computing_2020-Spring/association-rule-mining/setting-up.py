@@ -4,7 +4,7 @@
 # ------------------ SETTING UP THE RANKED DATA ------------------
 # ----------------------------------------------------------------
 
-# Install assocation rule mining library
+# Install association rule mining library
 # pip3 install apyori
 
 import numpy as np
@@ -18,7 +18,7 @@ dailyRankedCrimes = pd.read_csv(repositoryPath + dataCsvPath + "WorcesterData_Bi
 yearlyRankedCrimes = pd.read_csv(repositoryPath + dataCsvPath + "WorcesterData_BinRanked_Year.csv",error_bad_lines=False)
 
 # Fix the Column names in the daily ranked crimes
-# Found that this breaks assocation rule mining - related to using date? 
+# Found that this breaks association rule mining - related to using date? 
 #dailyRankedCrimes['ACTUAL_DTE'] = pd.to_datetime(dailyRankedCrimes['ACTUAL_DTE']*10000+dailyRankedCrimes['ACTUAL_DTE.1']*100+dailyRankedCrimes['ACTUAL_DTE.2'],format='%Y%m%d')
 #del dailyRankedCrimes['ACTUAL_DTE.1']
 #del dailyRankedCrimes['ACTUAL_DTE.2']

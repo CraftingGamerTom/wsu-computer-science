@@ -1,11 +1,11 @@
 # ----------------------------------------------------------------
-# ---------- ASSOCATION RULE MINING : NOTEABLE ATTEMPT 4 ---------
+# ---------- ASSOCIATION RULE MINING : NOTEABLE ATTEMPT 4 ---------
 # ----------------------------------------------------------------
 
 
 # ------------------ DAILY DATASET --------------------
 
-# Remove the RANK column
+# Remove the WEIGHTED_INCIDENT_SCORE column
 del dailyRankedCrimes['WEIGHTED_INCIDENT_SCORE']
 
 association_rules = apriori(dailyRankedCrimes.values, min_support=0.00045, min_confidence=0.95, min_lift=3, min_length=2, use_colnames = True)
@@ -21,7 +21,7 @@ print(len(association_results))
 
 # ------------------ YEARLY DATASET --------------------
 
-# Remove the RANK column
+# Remove the WEIGHTED_INCIDENT_SCORE column
 del yearlyRankedCrimes['WEIGHTED_INCIDENT_SCORE']
 
 association_rules = apriori(yearlyRankedCrimes.values, min_support=0.05, min_confidence=0.95, min_lift=3, min_length=2, use_colnames = True)
