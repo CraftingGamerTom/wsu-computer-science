@@ -7,11 +7,17 @@
 records = []
 for i in range(0, 186123):
  records.append([str(dailyRankedCrimes.values[i,j]) for j in range(0, 4)])
+ if(i%10000 == 0):
+        print(i)
+
+print("Created daily records")
 
 # At this point it ran for many hours (on mny local machine) and never finished (not parallized) but on a i7 CPU with 16 GB of RAM
 # We found that python arrays were just too inefficient 
 
-
+association_rules = apriori(dailyRankedCrimes, min_support=0.2, min_confidence=0.95, min_lift=3, min_length=4)
+association_results = list(association_rules)
+print(len(association_results))
 
 # ------------------ YEARLY DATASET --------------------
 

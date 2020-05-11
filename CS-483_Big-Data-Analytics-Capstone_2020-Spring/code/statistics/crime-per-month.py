@@ -1,5 +1,8 @@
 #%%
 
+# https://www.kaggle.com/skeftical/chicago-crimes-eda-spatio-temporal
+# https://www.kaggle.com/djonafegnem/chicago-crime-data-analysis
+
 # TODO Use line below to drop columns not needed
 # crimes.drop(['Unnamed: 0', 'Case Number', 'IUCR','Updated On','Year', 'FBI Code', 'Beat','Ward','Community Area', 'Location'], inplace=True, axis=1)
 
