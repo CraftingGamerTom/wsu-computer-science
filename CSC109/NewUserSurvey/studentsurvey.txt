@@ -1,0 +1,31 @@
+college,age,sex,work,havechildren,ownpc
+Computer Science,22,Female,0,0,1
+Engineering,38,Male,1,1,0
+Biology,33,Female,1,1,1
+Engineering,28,Female,1,1,1
+Biology,36,Male,1,1,1
+Computer Science,35,Male,1,1,1
+Biology,19,Female,1,0,1
+Engineering,20,Female,0,0,1
+Engineering,23,Female,1,1,1
+Engineering,18,Female,0,0,1
+Biology,40,Female,1,1,0
+Computer Science,38,Male,1,1,0
+Computer Science,18,Male,1,1,0
+Computer Science,31,Male,1,0,1
+Engineering,20,Female,1,0,1
+Chemistry,28,Female,1,1,1
+Engineering,37,Female,1,1,0
+Chemistry,31,Male,1,1,1
+Chemistry,23,Female,0,0,1
+Computer Science,36,Male,0,0,0
+Biology,31,Female,0,0,0
+Engineering,25,Male,1,1,1
+Biology,22,Female,1,0,1
+Computer Science,19,Female,0,0,1
+Computer Science,19,Male,1,1,1
+Computer Science,27,Female,1,0,1
+Computer Science,39,Female,1,1,1
+Computer Science,23,Male,1,0,1
+Biology,22,Female,0,0,1
+Chemistry,36,Male,1,1,0

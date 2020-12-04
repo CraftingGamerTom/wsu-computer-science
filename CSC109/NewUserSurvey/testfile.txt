@@ -1,0 +1,2 @@
+college, age, sex, work, have children, own pc
+Biology,111,Female,0,1,0

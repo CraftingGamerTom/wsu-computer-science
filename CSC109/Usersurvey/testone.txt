@@ -1,0 +1,36 @@
+college, age, sex, work, have children, own pc
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice2,23,Female,0,1,1
+choice4,34,Male,0,1,0
+choice4,34,Male,0,1,0
+Computer Science,19,Male,1,0,1
+Computer Science,55,Female,0,1,0
